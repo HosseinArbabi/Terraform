@@ -4,7 +4,7 @@ resource "aws_instance" "NAME" {
   key_name      = var.key_name
 
   tags = {
-    Name       = "NAME"
-    Created_By = "Terraform"
+    machine_name  = "NAME"
+    Created_By    = "Terraform"
   }
 }
