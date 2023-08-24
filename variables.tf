@@ -3,7 +3,10 @@
 # variable "key_name" { default = "KEY_NAME" }
 # variable "machine_name" { default = "VM_NAME" }
 
-variable "ami_id" {}
-variable "instance_type" {}
+variable "ami_id" {default ="ami-ID"}
+variable "instance_type" {
+    type = string
+    description = "this is instance name"
+}
 variable "key_name" {}
 variable "machine_name" {}
