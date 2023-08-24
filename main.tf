@@ -1,16 +1,10 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
+resource "aws_instance" "NAME" {
+  ami           = var.ami_id //Image ID
+  instance_type = var.instance_type
+  key_name      = var.key_name
 
-# Configure the AWS Provider
-provider "aws" {
-  region = "us-east-1"
-  access_key = "my-access-key"
-  secret_key = "my-secret-key"
-}
+  tags = {
+    Name       = "NAME"
+    Created_By = "Terraform"
+  }
 }
